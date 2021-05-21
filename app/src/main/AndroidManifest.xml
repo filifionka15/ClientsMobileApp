@@ -9,12 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ClientInfo"></activity>
+        <activity android:name=".EditClient"></activity>
+        <activity android:name=".EditOrder" />
+        <activity android:name=".AddClientOrder" />
+        <activity android:name=".AddOrder" />
+        <activity android:name=".AddClient" />
+        <activity android:name=".Orders" />
+        <activity android:name=".OrderInfo" />
+        <activity android:name=".ClientInfo" />
         <activity android:name=".TestTest" />
-        <activity android:name=".Test" />
+        <activity android:name=".Clients" />
         <activity android:name=".Clients1" />
         <activity
-            android:name=".Clients"
+            android:name=".Clientstest"
             android:label="@string/title_activity_clients"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Products" />

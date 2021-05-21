@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.main_menu.*
 import kotlinx.android.synthetic.main.registration.*
-import kotlinx.android.synthetic.main.registration.register_button
 
 
 class Registration : AppCompatActivity() {
@@ -33,15 +30,15 @@ class Registration : AppCompatActivity() {
     }
 
     fun onClickRegistration (view: View?) {
-        if (email?.text.toString().isEmpty()) {
-            email?.error = "Пожалуйста, введите свою почту"
-            email?.requestFocus()
+        if (E_mail?.text.toString().isEmpty()) {
+            E_mail?.error = "Пожалуйста, введите свою почту"
+            E_mail?.requestFocus()
             return
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email?.text.toString()).matches()) {
-            email?.error = "Пожалуйста, введите корректную почту"
-            email?.requestFocus()
+        if (!Patterns.EMAIL_ADDRESS.matcher(E_mail?.text.toString()).matches()) {
+            E_mail?.error = "Пожалуйста, введите корректную почту"
+            E_mail?.requestFocus()
             return
         }
 
@@ -64,7 +61,7 @@ class Registration : AppCompatActivity() {
         }
 
 
-        auth?.createUserWithEmailAndPassword(email?.text.toString(), password?.text.toString())
+        auth?.createUserWithEmailAndPassword(E_mail?.text.toString(), password?.text.toString())
             ?.addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     startActivity(Intent(this, Login::class.java))

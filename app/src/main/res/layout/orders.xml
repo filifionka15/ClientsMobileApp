@@ -4,30 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Clients">
-
-    <Button
-        android:id="@+id/add_client"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickAddClient"
-        android:text="Добавить клиента"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887" />
+    tools:context=".Orders">
 
     <ScrollView
-        android:layout_width="360dp"
-        android:layout_height="393dp"
+        android:layout_width="313dp"
+        android:layout_height="357dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349">
+        app:layout_constraintVertical_bias="0.368">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,15 +21,24 @@
             android:orientation="vertical" >
 
             <TableLayout
-                android:id="@+id/table_main"
+                android:id="@+id/table_orders"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-
-            </TableLayout>
+                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAddOrder"
+        android:text="Добавить заказ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
 
     <Button
         android:id="@+id/back"
@@ -53,8 +48,9 @@
         android:text="Назад"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.065" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
